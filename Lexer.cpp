@@ -72,6 +72,7 @@ void Lexer::Run(std::string& input) {
         input.erase(input.begin(), input.begin() + maxRead);
     }
     //add end of file token to all tokens
+    tokens.push_back(new Token(TokenType::END_OF_FILE, "", lineNumber));
     for (Token* token : tokens) {
         std::cout << token->ToString();
     }
