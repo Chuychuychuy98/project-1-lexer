@@ -14,7 +14,6 @@ Lexer::Lexer() {
 }
 
 Lexer::~Lexer() {
-    // TODO: need to clean up the memory in `automata` and `tokens`
     for (Automaton* automaton : automata) {
         delete automaton;
     }
@@ -66,7 +65,7 @@ void Lexer::Run(std::string& input) {
         // No automaton accepted input
         else {
             maxRead = 1;
-            Token* newToken = new Token(TokenType::UNDEFINED, "", lineNumber);
+            Token* newToken = new Token(TokenType::UNDEFINED, std::string(1,input.at(0)), lineNumber);
             tokens.push_back(newToken);
         }
         input.erase(input.begin(), input.begin() + maxRead);
