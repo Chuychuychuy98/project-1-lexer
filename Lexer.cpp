@@ -10,6 +10,7 @@
 #include "AddAutomaton.h"
 #include "SchemesAutomaton.h"
 #include "FactsAutomaton.h"
+#include "RulesAutomaton.h"
 
 Lexer::Lexer() {
     CreateAutomata();
@@ -36,6 +37,7 @@ void Lexer::CreateAutomata() {
     automata.push_back(new AddAutomaton());
     automata.push_back(new SchemesAutomaton());
     automata.push_back(new FactsAutomaton());
+    automata.push_back(new RulesAutomaton());
     // TODO: Add the other needed automata here
 }
 
