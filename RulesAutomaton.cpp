@@ -8,9 +8,9 @@
 // Created by Chandler Rowe on 9/10/21.
 //
 
-#include "FactsAutomaton.h"
+#include "RulesAutomaton.h"
 
-void FactsAutomaton::S0(const std::string &input) {
+void RulesAutomaton::S0(const std::string &input) {
     if (input[index] == 'R') {
         index++;
         S1(input);
@@ -20,8 +20,8 @@ void FactsAutomaton::S0(const std::string &input) {
     }
 }
 
-void FactsAutomaton::S1(const std::string &input) {
-    if (input[index] == 'U') {
+void RulesAutomaton::S1(const std::string &input) {
+    if (input[index] == 'u') {
         index++;
         S2(input);
     }
@@ -30,8 +30,8 @@ void FactsAutomaton::S1(const std::string &input) {
     }
 }
 
-void FactsAutomaton::S2(const std::string &input) {
-    if (input[index] == 'L') {
+void RulesAutomaton::S2(const std::string &input) {
+    if (input[index] == 'l') {
         index++;
         S3(input);
     }
@@ -40,8 +40,8 @@ void FactsAutomaton::S2(const std::string &input) {
     }
 }
 
-void FactsAutomaton::S3(const std::string &input) {
-    if (input[index] == 'E') {
+void RulesAutomaton::S3(const std::string &input) {
+    if (input[index] == 'e') {
         index++;
         S4(input);
     }
@@ -50,8 +50,8 @@ void FactsAutomaton::S3(const std::string &input) {
     }
 }
 
-void FactsAutomaton::S4(const std::string &input) {
-    if (input[index] == 'S') {
+void RulesAutomaton::S4(const std::string &input) {
+    if (input[index] == 's') {
         index++;
         inputRead = 5;
     } else {

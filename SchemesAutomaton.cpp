@@ -15,7 +15,7 @@ void SchemesAutomaton::S0(const std::string &input) {
 }
 
 void SchemesAutomaton::S1(const std::string &input) {
-    if (input[index] == 'C') {
+    if (input[index] == 'c') {
         index++;
         S2(input);
     }
@@ -25,7 +25,7 @@ void SchemesAutomaton::S1(const std::string &input) {
 }
 
 void SchemesAutomaton::S2(const std::string &input) {
-    if (input[index] == 'H') {
+    if (input[index] == 'h') {
         index++;
         S3(input);
     }
@@ -35,7 +35,7 @@ void SchemesAutomaton::S2(const std::string &input) {
 }
 
 void SchemesAutomaton::S3(const std::string &input) {
-    if (input[index] == 'E') {
+    if (input[index] == 'e') {
         index++;
         S4(input);
     }
@@ -45,7 +45,7 @@ void SchemesAutomaton::S3(const std::string &input) {
 }
 
 void SchemesAutomaton::S4(const std::string &input) {
-    if (input[index] == 'M') {
+    if (input[index] == 'm') {
         index++;
         S5(input);
     }
@@ -55,13 +55,13 @@ void SchemesAutomaton::S4(const std::string &input) {
 }
 
 void SchemesAutomaton::S5(const std::string &input) {
-    if (input[index] == 'E') {
+    if (input[index] == 'e') {
         index++;
         S6(input);
     }
 }
 void SchemesAutomaton::S6(const std::string &input) {
-    if (input[index] == 'S') {
+    if (input[index] == 's') {
         index++;
         inputRead = 7;
     }

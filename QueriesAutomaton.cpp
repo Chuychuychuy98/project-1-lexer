@@ -15,7 +15,7 @@ void QueriesAutomaton::S0(const std::string &input) {
 }
 
 void QueriesAutomaton::S1(const std::string &input) {
-    if (input[index] == 'U') {
+    if (input[index] == 'u') {
         index++;
         S2(input);
     }
@@ -25,7 +25,7 @@ void QueriesAutomaton::S1(const std::string &input) {
 }
 
 void QueriesAutomaton::S2(const std::string &input) {
-    if (input[index] == 'E') {
+    if (input[index] == 'e') {
         index++;
         S3(input);
     }
@@ -35,7 +35,7 @@ void QueriesAutomaton::S2(const std::string &input) {
 }
 
 void QueriesAutomaton::S3(const std::string &input) {
-    if (input[index] == 'R') {
+    if (input[index] == 'r') {
         index++;
         S4(input);
     }
@@ -45,7 +45,7 @@ void QueriesAutomaton::S3(const std::string &input) {
 }
 
 void QueriesAutomaton::S4(const std::string &input) {
-    if (input[index] == 'I') {
+    if (input[index] == 'i') {
         index++;
         S5(input);
     }
@@ -55,13 +55,13 @@ void QueriesAutomaton::S4(const std::string &input) {
 }
 
 void QueriesAutomaton::S5(const std::string &input) {
-    if (input[index] == 'E') {
+    if (input[index] == 'e') {
         index++;
         S6(input);
     }
 }
 void QueriesAutomaton::S6(const std::string &input) {
-    if (input[index] == 'S') {
+    if (input[index] == 's') {
         index++;
         inputRead = 7;
     }
