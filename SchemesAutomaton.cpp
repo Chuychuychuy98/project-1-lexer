@@ -63,7 +63,7 @@ void SchemesAutomaton::S5(const std::string &input) {
 void SchemesAutomaton::S6(const std::string &input) {
     if (input[index] == 'S') {
         index++;
-        inputRead = 6;
+        inputRead = 7;
     }
     else {
         Serr();
