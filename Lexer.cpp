@@ -9,6 +9,7 @@
 #include "MultiplyAutomaton.h"
 #include "AddAutomaton.h"
 #include "SchemesAutomaton.h"
+#include "FactsAutomaton.h"
 
 Lexer::Lexer() {
     CreateAutomata();
@@ -34,6 +35,7 @@ void Lexer::CreateAutomata() {
     automata.push_back(new MultiplyAutomaton());
     automata.push_back(new AddAutomaton());
     automata.push_back(new SchemesAutomaton());
+    automata.push_back(new FactsAutomaton());
     // TODO: Add the other needed automata here
 }
 
