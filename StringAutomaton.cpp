@@ -16,7 +16,7 @@ void StringAutomaton::S0(const std::string &input) {
 }
 
 void StringAutomaton::S1(const std::string &input) {
-    if (input.size() < index) {
+    if (input.size() <= index) {
         Serr();
     }
     else if (input[index] == '\'') {
@@ -32,7 +32,7 @@ void StringAutomaton::S1(const std::string &input) {
 }
 
 void StringAutomaton::S2(const std::string &input) {
-    if (input.size() < index) {
+    if (input.size() <= index) {
        index++;
        inputRead++;
     }

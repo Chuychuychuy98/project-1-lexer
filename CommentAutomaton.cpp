@@ -49,7 +49,7 @@ void CommentAutomaton::S2(const std::string &input) {
 }
 
 void CommentAutomaton::SB1(const std::string &input) {
-    if (input.size() < index) { // Reached end of string
+    if (input.size() <= index) { // Reached end of string
         Serr();
     }
     else if (input[index] == '|') {
@@ -65,7 +65,7 @@ void CommentAutomaton::SB1(const std::string &input) {
 }
 
 void CommentAutomaton::SB2(const std::string &input){
-    if (input.size() < index) { // end of file
+    if (input.size() <= index) { // end of file
         Serr();
     }
     else if (input[index] == '#') { // end of comment
