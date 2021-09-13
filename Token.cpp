@@ -6,7 +6,7 @@ Token::Token(TokenType type, std::string description, int line) {
     this->line = line;
 }
 
-std::string Token::ToString() {
+std::string Token::ToString() const {
     std::string typeString;
     switch (type) {
         case TokenType::COLON:
