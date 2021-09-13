@@ -40,6 +40,7 @@ void CommentAutomaton::S2(const std::string &input) {
     if (input[index] == '\n') {
         index++;
         inputRead++;
+        newLines++;
     }
     else {
         index++;
@@ -57,6 +58,12 @@ void CommentAutomaton::SB1(const std::string &input) {
         inputRead++;
         SB2(input);
     }
+    else if (input[index] == '\n') {
+        index++;
+        inputRead++;
+        newLines++;
+        SB1(input);
+    }
     else {
         index++;
         inputRead++;
@@ -71,6 +78,12 @@ void CommentAutomaton::SB2(const std::string &input){
     else if (input[index] == '#') { // end of comment
         index++;
         inputRead++;
+    }
+    else if (input[index] == '\n') {
+        index++;
+        inputRead++;
+        newLines++;
+        SB1(input);
     }
     else { // comment continues
         index++;
