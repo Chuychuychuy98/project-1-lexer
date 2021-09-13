@@ -1,7 +1,6 @@
 #ifndef LEXER_H
 #define LEXER_H
 #include <vector>
-#include <iostream>
 #include "Automaton.h"
 #include "Token.h"
 
@@ -13,15 +12,12 @@ private:
 
     void CreateAutomata();
 
-    // TODO: add any other private methods here (if needed)
-
 public:
     Lexer();
     ~Lexer();
+    const std::vector<Token*> *GetTokens() const { return &tokens; }
 
     void Run(std::string& input);
-    
-    // TODO: add other public methods here
 
 };
 
