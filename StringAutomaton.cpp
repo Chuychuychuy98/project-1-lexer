@@ -3,7 +3,6 @@
 //
 
 #include "StringAutomaton.h"
-#include <iostream>
 
 void StringAutomaton::S0(const std::string &input) {
     if (input[index] == '\'') {
