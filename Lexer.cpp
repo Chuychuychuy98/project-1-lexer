@@ -14,6 +14,7 @@
 #include "QueriesAutomaton.h"
 #include "StringAutomaton.h"
 #include "CommentAutomaton.h"
+#include "IDAutomaton.h"
 
 Lexer::Lexer() {
     CreateAutomata();
@@ -44,7 +45,7 @@ void Lexer::CreateAutomata() {
     automata.push_back(new QueriesAutomaton());
     automata.push_back(new StringAutomaton());
     automata.push_back(new CommentAutomaton());
-    // TODO: Add the other needed automata here
+    automata.push_back(new IDAutomaton());
 }
 
 void Lexer::Run(std::string& input) {
