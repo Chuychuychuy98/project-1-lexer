@@ -14,8 +14,6 @@ public:
 private:
     void S1(const std::string &input);
     void S2(const std::string &input);
-    void S3(const std::string &input);
-    void S4(const std::string &input);
     void SB1(const std::string &input);
     void SB2(const std::string &input);
 };
