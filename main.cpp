@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     for (Token* token : *lexer->GetTokens()) {
         std::cout << token->ToString();
     }
-    std::cout << "Total tokens: " << lexer->GetTokens()->size();
+    std::cout << "Total Tokens = " << lexer->GetTokens()->size();
 
     delete lexer;
 
