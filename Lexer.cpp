@@ -81,9 +81,11 @@ void Lexer::Run(std::string& input) {
             }
                 // No automaton accepted input
             else {
-                maxRead = 1;
-                Token *newToken = new Token(TokenType::UNDEFINED, std::string(1, input.at(0)), lineNumber);
+                maxRead = (input.at(0) == '#' && input.at(1) == '|') || input.at(0) == '\'' ? input.size() : 1;
+                std::string substring = input.substr(0,maxRead);
+                Token *newToken = new Token(TokenType::UNDEFINED, substring, lineNumber);
                 tokens.push_back(newToken);
+                lineNumber += std::count(substring.begin(), substring.end(), '\n');
             }
             input.erase(input.begin(), input.begin() + maxRead);
         }

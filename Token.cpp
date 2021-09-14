@@ -64,5 +64,5 @@ std::string Token::ToString() const {
             typeString = "UNDEFINED";
             break;
     }
-    return "(" + typeString +", \"" + description + "\", " + std::to_string(line) + ")\n";
+    return "(" + typeString +",\"" + description + "\"," + std::to_string(line) + ")\n";
 }

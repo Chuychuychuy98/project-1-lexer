@@ -19,13 +19,12 @@ void IDAutomaton::S1(const std::string &input) {
     if (input.size() <= index || isspace(input[index])) {
         return;
     }
-        else if (isalnum(input[index])) {
+    else if (isalnum(input[index])) {
         index++;
         inputRead++;
         S1(input);
     }
 
     else {
-        Serr();
     }
 }

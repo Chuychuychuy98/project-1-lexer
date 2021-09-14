@@ -26,8 +26,8 @@ void CommentAutomaton::S1(const std::string &input) {
         SB1(input);
     }
     else if (input[index] == '\n' || input.size() == 1) {
-        index++;
-        inputRead++;
+        //index++;
+        //inputRead++;
     }
     else {
         index++;
@@ -39,8 +39,8 @@ void CommentAutomaton::S1(const std::string &input) {
 void CommentAutomaton::S2(const std::string &input) {
     if (input[index] == '\n') {
         index++;
-        inputRead++;
-        newLines++;
+        //inputRead++;
+        //newLines++;
     }
     else {
         index++;
