@@ -16,7 +16,7 @@ void IDAutomaton::S0(const std::string &input) {
 }
 
 void IDAutomaton::S1(const std::string &input) {
-    if (input.size() <= index || isspace(input[index])) {
+    if ((int)input.size() <= index || isspace(input[index])) {
         return;
     }
     else if (isalnum(input[index])) {

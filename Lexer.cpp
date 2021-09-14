@@ -85,7 +85,9 @@ void Lexer::Run(std::string& input) {
                 std::string substring = input.substr(0,maxRead);
                 Token *newToken = new Token(TokenType::UNDEFINED, substring, lineNumber);
                 tokens.push_back(newToken);
-                lineNumber += std::count(substring.begin(), substring.end(), '\n');
+                for (char character : substring) {
+                    if (character == '\n') lineNumber++;
+                }
             }
             input.erase(input.begin(), input.begin() + maxRead);
         }
